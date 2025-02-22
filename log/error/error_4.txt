@@ -1,0 +1,237 @@
+fev. 22, 2025 9:43:37 AM net.sf.l2j.gameserver.model.actor.Player create
+GRAVE: Couldn't create player LevelFalse for testelevel account.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseHpMax(PlayerTemplate.java:140)
+	at net.sf.l2j.gameserver.model.actor.status.CreatureStatus.getMaxHp(CreatureStatus.java:588)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxHp(PlayerStatus.java:711)
+	at net.sf.l2j.gameserver.model.actor.Player.create(Player.java:547)
+	at net.sf.l2j.gameserver.network.clientpackets.RequestCharacterCreate.runImpl(RequestCharacterCreate.java:122)
+	at net.sf.l2j.gameserver.network.clientpackets.L2GameClientPacket.run(L2GameClientPacket.java:52)
+	at net.sf.l2j.gameserver.network.GameClient.run(GameClient.java:140)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:43:40 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:43:43 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:43:46 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:43:49 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:43:52 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:43:55 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:43:58 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:44:01 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:44:04 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:44:07 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:44:10 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:44:13 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:44:16 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:44:19 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:44:22 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+fev. 22, 2025 9:44:25 AM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
+GRAVE: Exception in a ThreadPool task execution.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 80
+	at net.sf.l2j.gameserver.model.actor.template.PlayerTemplate.getBaseCpMax(PlayerTemplate.java:151)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.getMaxCp(PlayerStatus.java:695)
+	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.doRegeneration(PlayerStatus.java:336)
+	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
