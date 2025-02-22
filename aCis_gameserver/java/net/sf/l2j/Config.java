@@ -40,7 +40,7 @@ public final class Config
 	private static final String SERVER_FILE = "./config/server.properties";
 	private static final String SIEGE_FILE = "./config/siege.properties";
 	private static final String CUSTOM = "./config/l2jgo.properties";
-	private static final String AUTO_POTS_FILE = "./config/mods/autopots.properties";
+	private static final String AUTO_POTS_FILE = "./config/autopots.properties";
 	
 	// --------------------------------------------------
 	// Clans settings
@@ -369,6 +369,8 @@ public final class Config
 
 	public static boolean CUSTOM_START_TITLE_ALLOWED;
 	public static String CUSTOM_START_TITLE;
+	public static boolean INFINITY_SS;
+	public static boolean INFINITY_ARROWS;
 
 	// --------------------------------------------------
 	// Autopots settings
@@ -932,6 +934,8 @@ public final class Config
 		CUSTOM_START_TITLE_ALLOWED = custom.getProperty("CustomStartTitleAllowed", false);
 		CUSTOM_START_TITLE = custom.getProperty("CustomStartTitle", "La2GO");
 
+		INFINITY_SS = custom.getProperty("InfinitySS", false);
+		INFINITY_ARROWS = custom.getProperty("InfinityArrows", false);
 
 	}
 

@@ -1,5 +1,6 @@
 package net.sf.l2j.gameserver.handler.itemhandlers;
 
+import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.enums.items.ShotType;
 import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.actor.Playable;
@@ -45,16 +46,17 @@ public class BlessedSpiritShots implements IItemHandler
 		}
 		
 		// Consume bss if player has enough of them
-		if (!player.destroyItem(item.getObjectId(), weaponItem.getSpiritShotCount(), false))
+		//if (!player.destroyItem(item.getObjectId(), weaponItem.getSpiritShotCount(), false))
+		if (!Config.INFINITY_SS && !player.destroyItem(item.getObjectId(), weaponItem.getSpiritShotCount(), false))
 		{
 			if (!player.disableAutoShot(item.getItemId()))
 				player.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
-			
+
 			return;
 		}
-		
+
 		final IntIntHolder[] skills = item.getItem().getSkills();
-		
+
 		player.sendPacket(SystemMessageId.ENABLED_SPIRITSHOT);
 		player.setChargedShot(ShotType.BLESSED_SPIRITSHOT, true);
 		player.broadcastPacketInRadius(new MagicSkillUse(player, player, skills[0].getId(), 1, 0, 0), 600);

@@ -1,5 +1,6 @@
 package net.sf.l2j.gameserver.handler.itemhandlers;
 
+import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.enums.items.ShotType;
 import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.actor.Playable;
@@ -48,14 +49,15 @@ public class BeastSpiritShots implements IItemHandler
 		if (summon.isChargedShot(isBlessed ? ShotType.BLESSED_SPIRITSHOT : ShotType.SPIRITSHOT))
 			return;
 		
-		if (!player.destroyItem(item.getObjectId(), summon.getSpiritShotsPerHit(), false))
+		//if (!player.destroyItem(item.getObjectId(), summon.getSpiritShotsPerHit(), false))
+		if (!Config.INFINITY_SS && !player.destroyItem(item.getObjectId(), summon.getSpiritShotsPerHit(), false))
 		{
 			if (!player.disableAutoShot(itemId))
 				player.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS_FOR_PET);
-			
+
 			return;
 		}
-		
+
 		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PET_USES_S1).addItemName(itemId));
 		summon.setChargedShot(isBlessed ? ShotType.BLESSED_SPIRITSHOT : ShotType.SPIRITSHOT, true);
 		player.broadcastPacketInRadius(new MagicSkillUse(summon, summon, (isBlessed ? 2009 : 2008), 1, 0, 0), 600);

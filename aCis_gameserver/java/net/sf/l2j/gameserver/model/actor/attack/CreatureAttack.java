@@ -6,6 +6,7 @@ import java.util.concurrent.ScheduledFuture;
 import net.sf.l2j.commons.logging.CLogger;
 import net.sf.l2j.commons.pool.ThreadPool;
 
+import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.enums.AiEventType;
 import net.sf.l2j.gameserver.enums.GaugeColor;
 import net.sf.l2j.gameserver.enums.ZoneId;
@@ -349,8 +350,11 @@ public class CreatureAttack<T extends Creature>
 	 */
 	private HitHolder[] doAttackHitByBow(Creature target, Weapon weapon, int sAtk, boolean isSoulshot)
 	{
-		_actor.reduceArrowCount();
-		_actor.getStatus().reduceMp(_actor.getActiveWeaponItem().getMpConsume());
+		if (!Config.INFINITY_ARROWS){
+			_actor.reduceArrowCount();
+			_actor.getStatus().reduceMp(_actor.getActiveWeaponItem().getMpConsume());
+		}
+
 		
 		final HitHolder[] hits = new HitHolder[]
 		{

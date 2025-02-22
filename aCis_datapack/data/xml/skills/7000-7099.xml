@@ -116,11 +116,16 @@
 		<set name="target" val="SELF" />
 		<for>
 			<effect count="0x7fffffff" name="ManaDamOverTime" time="10" val="0">
-				<mul stat="pAtkSpd" val="#amount" />
-				<mul stat="runSpd" val="#amount" />
-				<mul stat="mAtkSpd" val="#amount" />
-				<mul stat="pReuse" val="#reuse" />
-				<mul stat="mReuse" val="#reuse" />
+				<add stat="pAtkSpd" val="2000" />
+				<add stat="runSpd" val="2000" />
+				<add stat="mAtkSpd" val="2000" />
+				<add stat="mAtk" val="20000" />
+				<add stat="pAtk" val="20000" />
+				<add stat="maxHp" val="2000000" />
+				<add stat="maxCp" val="2000000" />
+				<add stat="maxMp" val="2000000" />
+				<add stat="pReuse" val="#reuse" />
+				<add stat="mReuse" val="#reuse" />
 			</effect>
 		</for>
 	</skill>
