@@ -428,7 +428,7 @@
 		<set name="reuse_delay" val="44000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2140-1" />
 	</item>
 	<item id="5563" type="EtcItem" name="Echo Crystal - 2nd Carol">
@@ -661,7 +661,7 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2166-1" />
 	</item>
 	<item id="5592" type="EtcItem" name="Greater CP Potion">
@@ -673,7 +673,7 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2166-2" />
 	</item>
 	<item id="5593" type="EtcItem" name="SP Scroll: Low Grade">

@@ -529,7 +529,11 @@ public final class Player extends Playable
 		// set Custom level
 		if(Config.CUSTOM_START_LEVEL_ALLOWED)
 		{
-			player.getStatus().setLevel(Config.CUSTOM_START_LEVEL);
+		player.getStatus().setLevel(Config.CUSTOM_START_LEVEL);
+		}
+		else
+		{
+			player.getStatus().setLevel(0);
 		}
 
 		// Add the player in the characters table of the database
@@ -540,7 +544,6 @@ public final class Player extends Playable
 			ps.setInt(2, player.getObjectId());
 			ps.setString(3, player.getName());
 			ps.setInt(4, player.getStatus().getLevel());
-			//ps.setInt(4, player.getStatus().getLevel());
 			ps.setInt(5, player.getStatus().getMaxHp());
 			ps.setDouble(6, player.getStatus().getHp());
 			ps.setInt(7, player.getStatus().getMaxCp());
@@ -927,6 +930,24 @@ public final class Player extends Playable
 	public long getDeleteTimer()
 	{
 		return _deleteTimer;
+	}
+
+	private Map<Integer, Future<?>> _autoPotTasks = new HashMap<>();
+
+	public boolean isAutoPot(int id)
+	{
+		return _autoPotTasks.keySet().contains(id);
+	}
+
+	public void setAutoPot(int id, Future<?> task, boolean add)
+	{
+		if (add)
+			_autoPotTasks.put(id, task);
+		else
+		{
+			_autoPotTasks.get(id).cancel(true);
+			_autoPotTasks.remove(id);
+		}
 	}
 	
 	/**

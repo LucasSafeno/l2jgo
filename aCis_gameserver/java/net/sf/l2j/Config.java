@@ -40,6 +40,7 @@ public final class Config
 	private static final String SERVER_FILE = "./config/server.properties";
 	private static final String SIEGE_FILE = "./config/siege.properties";
 	private static final String CUSTOM = "./config/l2jgo.properties";
+	private static final String AUTO_POTS_FILE = "./config/mods/autopots.properties";
 	
 	// --------------------------------------------------
 	// Clans settings
@@ -368,6 +369,17 @@ public final class Config
 
 	public static boolean CUSTOM_START_TITLE_ALLOWED;
 	public static String CUSTOM_START_TITLE;
+
+	// --------------------------------------------------
+	// Autopots settings
+	// --------------------------------------------------
+
+	public static int CP_POT_CD;
+	public static int HP_POT_CD;
+	public static int MP_POT_CD;
+	public static double CP_REQUIRED;
+	public static double HP_REQUIRED;
+	public static double MP_REQUIRED;
 
 
 	// --------------------------------------------------
@@ -922,6 +934,20 @@ public final class Config
 
 
 	}
+
+	/**
+	 * Loads AutoPots settings.
+	 */
+	private static final void loadAPots()
+	{
+		ExProperties apots = initProperties(AUTO_POTS_FILE);
+		CP_POT_CD = Integer.parseInt(apots.getProperty("CP_POT_CD", "1000"));
+		HP_POT_CD = Integer.parseInt(apots.getProperty("HP_POT_CD", "1000"));
+		MP_POT_CD = Integer.parseInt(apots.getProperty("MP_POT_CD", "1000"));
+		CP_REQUIRED = apots.getProperty("CP_REQUIRED", 0.95);
+		HP_REQUIRED = apots.getProperty("HP_REQUIRED", 0.95);
+		MP_REQUIRED = apots.getProperty("MP_REQUIRED", 0.95);
+	}
 	
 	/**
 	 * Loads gameserver settings.<br>
@@ -1107,6 +1133,9 @@ public final class Config
 
 		// custom settings
 		loadCustom();
+
+		// APots settings
+		 loadAPots();
 		
 		// server settings
 		loadServer();

@@ -265,7 +265,7 @@
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2037-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 		<set name="shared_reuse_group" val="10" />
@@ -279,7 +279,7 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2038-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
