@@ -1,4 +1,4 @@
-fev. 22, 2025 1:47:45 PM net.sf.l2j.Config initProperties
+fev. 22, 2025 2:09:38 PM net.sf.l2j.Config initProperties
 GRAVE: An error occured loading './config/mods/autopots.properties' config.
 java.io.FileNotFoundException: ./config/mods/autopots.properties (Arquivo ou diretório inexistente)
 	at java.base/java.io.FileInputStream.open0(Native Method)
@@ -10,37 +10,4 @@ java.io.FileNotFoundException: ./config/mods/autopots.properties (Arquivo ou dir
 	at net.sf.l2j.Config.loadGameServer(Config.java:1142)
 	at net.sf.l2j.gameserver.GameServer.<init>(GameServer.java:133)
 	at net.sf.l2j.gameserver.GameServer.main(GameServer.java:112)
-
-fev. 22, 2025 1:50:01 PM net.sf.l2j.commons.pool.ThreadPool$TaskWrapper run
-GRAVE: Exception in a ThreadPool task execution.
-java.lang.NullPointerException: Cannot invoke "java.util.Optional.isEmpty()" because "tempSkill" is null
-	at net.sf.l2j.gameserver.model.actor.Player.removeInvalidSkills(Player.java:3346)
-	at net.sf.l2j.gameserver.model.actor.Player.giveSkills(Player.java:3297)
-	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.addLevel(PlayerStatus.java:626)
-	at net.sf.l2j.gameserver.model.actor.status.PlayableStatus.addExp(PlayableStatus.java:91)
-	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.addExp(PlayerStatus.java:480)
-	at net.sf.l2j.gameserver.model.actor.status.PlayableStatus.addExpAndSp(PlayableStatus.java:125)
-	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.addExpAndSp(PlayerStatus.java:503)
-	at net.sf.l2j.gameserver.model.actor.status.PlayerStatus.addExpAndSp(PlayerStatus.java:574)
-	at net.sf.l2j.gameserver.model.actor.Player.addExpAndSp(Player.java:6168)
-	at net.sf.l2j.gameserver.model.actor.instance.Monster.calculateRewards(Monster.java:169)
-	at net.sf.l2j.gameserver.model.actor.Creature.doDie(Creature.java:507)
-	at net.sf.l2j.gameserver.model.actor.Npc.doDie(Npc.java:474)
-	at net.sf.l2j.gameserver.model.actor.Attackable.doDie(Attackable.java:87)
-	at net.sf.l2j.gameserver.model.actor.status.CreatureStatus.reduceHp(CreatureStatus.java:256)
-	at net.sf.l2j.gameserver.model.actor.status.NpcStatus.reduceHp(NpcStatus.java:34)
-	at net.sf.l2j.gameserver.model.actor.status.AttackableStatus.reduceHp(AttackableStatus.java:29)
-	at net.sf.l2j.gameserver.model.actor.Creature.reduceCurrentHp(Creature.java:1644)
-	at net.sf.l2j.gameserver.model.actor.Npc.reduceCurrentHp(Npc.java:468)
-	at net.sf.l2j.gameserver.model.actor.instance.Monster.reduceCurrentHp(Monster.java:291)
-	at net.sf.l2j.gameserver.model.actor.Attackable.reduceCurrentHp(Attackable.java:81)
-	at net.sf.l2j.gameserver.model.actor.attack.CreatureAttack.doHit(CreatureAttack.java:264)
-	at net.sf.l2j.gameserver.model.actor.attack.CreatureAttack.onHitTimer(CreatureAttack.java:188)
-	at net.sf.l2j.commons.pool.ThreadPool$TaskWrapper.run(ThreadPool.java:124)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
 

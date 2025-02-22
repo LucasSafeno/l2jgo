@@ -1,13 +1,13 @@
-fev. 22, 2025 1:56:34 PM net.sf.l2j.Config initProperties
+fev. 22, 2025 6:17:01 PM net.sf.l2j.Config initProperties
 GRAVE: An error occured loading './config/mods/autopots.properties' config.
 java.io.FileNotFoundException: ./config/mods/autopots.properties (Arquivo ou diretório inexistente)
 	at java.base/java.io.FileInputStream.open0(Native Method)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
 	at net.sf.l2j.commons.config.ExProperties.load(ExProperties.java:29)
-	at net.sf.l2j.Config.initProperties(Config.java:553)
-	at net.sf.l2j.Config.loadAPots(Config.java:947)
-	at net.sf.l2j.Config.loadGameServer(Config.java:1142)
+	at net.sf.l2j.Config.initProperties(Config.java:570)
+	at net.sf.l2j.Config.loadAPots(Config.java:1003)
+	at net.sf.l2j.Config.loadGameServer(Config.java:1198)
 	at net.sf.l2j.gameserver.GameServer.<init>(GameServer.java:133)
 	at net.sf.l2j.gameserver.GameServer.main(GameServer.java:112)
 

@@ -15,6 +15,7 @@ import net.sf.l2j.commons.config.ExProperties;
 import net.sf.l2j.commons.logging.CLogger;
 
 import net.sf.l2j.gameserver.enums.GeoType;
+import net.sf.l2j.gameserver.model.holder.BuffSkillHolder;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
 
 /**
@@ -209,6 +210,22 @@ public final class Config
 	/** Scheme Buffer */
 	public static int BUFFER_MAX_SCHEMES;
 	public static int BUFFER_STATIC_BUFF_COST;
+
+public static String FIGHTER_SET;
+public static int[] FIGHTER_SET_LIST;
+public static String MAGE_SET;
+public static int[] MAGE_SET_LIST;
+public static int BUFFER_MAX_SKILLS;
+public static String BUFFER_BUFFS;
+public static Map<Integer, BuffSkillHolder> BUFFER_BUFFLIST;
+public static boolean RESTRICT_USE_BUFFER_ON_PVPFLAG;
+public static boolean RESTRICT_USE_BUFFER_IN_COMBAT;
+
+public static List<Integer> FIGHTER_SKILL_LIST;
+public static List<Integer> MAGE_SKILL_LIST;
+
+public static int PVOTE_BUFF_ITEM_ID;
+public static int PVOTE_BUFF_ITEM_COUNT;
 	
 	/** Misc */
 	public static boolean FREE_TELEPORT;
@@ -369,9 +386,9 @@ public final class Config
 
 	public static boolean CUSTOM_START_TITLE_ALLOWED;
 	public static String CUSTOM_START_TITLE;
+
 	public static boolean INFINITY_SS;
 	public static boolean INFINITY_ARROWS;
-
 	// --------------------------------------------------
 	// Autopots settings
 	// --------------------------------------------------
@@ -754,6 +771,43 @@ public final class Config
 		
 		BUFFER_MAX_SCHEMES = npcs.getProperty("BufferMaxSchemesPerChar", 4);
 		BUFFER_STATIC_BUFF_COST = npcs.getProperty("BufferStaticCostPerBuff", -1);
+
+		BUFFER_MAX_SKILLS = npcs.getProperty("BufferMaxSkillsPerScheme", 24);
+		BUFFER_BUFFS = npcs.getProperty("BufferBuffs");
+
+		FIGHTER_SET = npcs.getProperty("FighterSet", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650");
+		MAGE_SET = npcs.getProperty("MageSet", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650");
+
+		String[] FighterList = FIGHTER_SET.split(",");
+		FIGHTER_SET_LIST = new int[FighterList.length];
+		for (int i = 0; i < FighterList.length; i++)
+			FIGHTER_SET_LIST[i] = Integer.parseInt(FighterList[i]);
+
+		String[] MageList = MAGE_SET.split(",");
+		MAGE_SET_LIST = new int[MageList.length];
+		for (int i = 0; i < MageList.length; i++)
+			MAGE_SET_LIST[i] = Integer.parseInt(MageList[i]);
+
+		BUFFER_BUFFLIST = new HashMap<>();
+		for (String skillInfo : BUFFER_BUFFS.split(";"))
+		{
+			final String[] infos = skillInfo.split(",");
+			BUFFER_BUFFLIST.put(Integer.valueOf(infos[0]), new BuffSkillHolder(Integer.valueOf(infos[0]), Integer.valueOf(infos[1]), Integer.valueOf(infos[2]), infos[3], skillInfo));
+		}
+
+		RESTRICT_USE_BUFFER_ON_PVPFLAG = npcs.getProperty("RestrictUseBufferOnPvPFlag", true);
+		RESTRICT_USE_BUFFER_IN_COMBAT = npcs.getProperty("RestrictUseBufferInCombat", true);
+
+		PVOTE_BUFF_ITEM_ID = npcs.getProperty("VoteBuffItemId", 57);
+		PVOTE_BUFF_ITEM_COUNT = npcs.getProperty("VoteBuffItemCount", 1);
+
+		FIGHTER_SKILL_LIST = new ArrayList<>();
+		for (String skill_id : npcs.getProperty("FighterSkillList", "").split(";"))
+			FIGHTER_SKILL_LIST.add(Integer.parseInt(skill_id));
+
+		MAGE_SKILL_LIST = new ArrayList<>();
+		for (String skill_id : npcs.getProperty("MageSkillList", "").split(";"))
+			MAGE_SKILL_LIST.add(Integer.parseInt(skill_id));
 		
 		FREE_TELEPORT = npcs.getProperty("FreeTeleport", false);
 		MOB_AGGRO_IN_PEACEZONE = npcs.getProperty("MobAggroInPeaceZone", true);
@@ -936,6 +990,8 @@ public final class Config
 
 		INFINITY_SS = custom.getProperty("InfinitySS", false);
 		INFINITY_ARROWS = custom.getProperty("InfinityArrows", false);
+
+
 
 	}
 

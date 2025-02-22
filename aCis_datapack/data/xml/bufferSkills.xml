@@ -37,7 +37,7 @@
 		<buff id="1397" desc="Decreases MP consumption rate."/><!-- Clarity -->
 		<buff id="1413" desc="Increases mage abilities."/><!-- Magnus' Chant -->
 	</category>
-	<category type="Dances">
+	<category type="Other">
 		<buff id="271" desc="Increases P. Atk."/><!-- Dance of the Warrior -->
 		<buff id="272" desc="Increases Accuracy."/><!-- Dance of Inspiration -->
 		<buff id="273" desc="Increases M. Atk."/><!-- Dance of the Mystic -->
@@ -50,8 +50,6 @@
 		<buff id="310" desc="Restores HP by inflicted damage."/><!-- Dance of the Vampire -->
 		<buff id="311" desc="Increases resistance to terrain damage."/><!-- Dance of Protection -->
 		<buff id="365" desc="Increases rate of magic crit. damage."/><!-- Siren's Dance -->
-	</category>
-	<category type="Songs">
 		<buff id="264" desc="Increases P. Def."/><!-- Song of Earth -->
 		<buff id="265" desc="Increases HP regeneration."/><!-- Song of Life -->
 		<buff id="266" desc="Increases Evasion."/><!-- Song of Water -->
